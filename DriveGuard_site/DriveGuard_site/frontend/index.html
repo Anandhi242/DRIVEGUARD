@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveGuard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login">
+  <form id="loginForm" class="card login-card" autocomplete="off">
+    <div class="brand">Drive<b>Guard</b></div>
+    <p class="muted">Predictive failure analysis for data center storage</p>
+    <label>Username<input id="u" required></label>
+    <label>Password<input id="p" type="password" required></label>
+    <button class="btn" type="submit">Sign in</button>
+    <p id="loginErr" class="err"></p>
+    <p class="muted small">First-run passwords are printed in the terminal where you started the server and saved in data/first_run_credentials.txt.</p>
+  </form>
+</section>
+
+<div id="shell" hidden>
+  <aside class="side">
+    <div class="brand">Drive<b>Guard</b></div>
+    <nav id="nav">
+      <a data-v="fleet">Fleet Dashboard</a>
+      <a data-v="drives">Drive Risk Details</a>
+      <a data-v="sim">Failure Simulation</a>
+      <a data-v="assistant">AI Assistant</a>
+      <a data-v="logs">System Logs</a>
+    </nav>
+    <div class="who"><span id="whoName"></span><span id="whoRole" class="pill"></span>
+      <button class="btn ghost" id="out">Sign out</button></div>
+  </aside>
+  <main id="view"></main>
+</div>
+
+<script src="chart.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

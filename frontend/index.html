@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveGuard</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="login">
+  <form id="loginForm" class="card login-card" autocomplete="off">
+    <img src="logo.svg" alt="DriveGuard logo" class="logo">
+    <div class="brand center">Drive<b>Guard</b></div>
+    <p class="muted center tag-line">Predictive failure analysis for data center storage</p>
+    <label>Username<input id="u" required></label>
+    <label>Password<input id="p" type="password" required></label>
+    <button class="btn" type="submit">Sign in</button>
+    <p id="loginErr" class="err center"></p>
+  </form>
+</section>
+
+<div id="shell" hidden>
+  <aside class="side">
+    <div class="side-brand"><img src="logo.svg" alt="" width="34" height="34"><div class="brand">Drive<b>Guard</b></div></div>
+    <nav id="nav">
+      <a data-v="fleet">Fleet Dashboard</a>
+      <a data-v="drives">Drive Risk Details</a>
+      <a data-v="model">Model Results</a>
+      <a data-v="sim">Failure Simulation</a>
+      <a data-v="assistant">AI Assistant</a>
+      <a data-v="logs">System Logs</a>
+    </nav>
+    <div class="who"><span id="whoName"></span><span id="whoRole" class="pill"></span>
+      <button class="btn ghost" id="out">Sign out</button></div>
+  </aside>
+  <main id="view"></main>
+</div>
+
+<script src="chart.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
